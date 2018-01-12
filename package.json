@@ -21,7 +21,11 @@
   },
   "build": {
     "productName": "bpa",
-    "appId": "org.simulatedgreg.electron-vue",
+    "appId": "hf",
+    "nsis":{
+      "oneClick":false,
+      "allowToChangeInstallationDirectory":true
+    },
     "directories": {
       "output": "build"
     },
