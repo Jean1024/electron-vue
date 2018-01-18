@@ -1,0 +1,35 @@
+1，登录接口
+地址：http://shanxi.decision.tianqi.cn/home/work/login
+方式：post
+参数：username（公众用户：public，决策用户：test）
+     password（123456）
+     appid   （27）
+
+2，首页广告：https://shanxi.decision.tianqi.cn/Home/Work/getnewslist/type/41
+
+3，山西预警接口：http://decision-admin.tianqi.cn/Home/extra/getwarns?areaid=14
+
+4，天气预报逻辑
+* 默认状态：显示定位城市及周边城市天气图标
+* 搜索城市：显示搜索城市及周边城市天气图标
+* 周边城市数据：surround.json
+
+5，实况监测：
+* 图层接口：http://national-observe-data.tianqi.cn/project/data/getcoverage?type=js,wd,fs,sd,qy
+
+* 站点接口：http://decision-171.tianqi.cn/weather/rgwst/NewestDataNew?stationids=123&date=201801161426&appid=f63d32&key=kXSCENKodeeJfYYzyEdJGgOt52w%3D
+  方式：POST
+  参数：ids （全国所有人工站：all.json）
+
+6，实况排名：http://decision-171.tianqi.cn/weather/rgwst/NearStation?starttime=2018011614&endtime=2018011614&province=山西&map=all&num=30（过去1小时全要素排行）
+
+7，空气质量：
+* 排名：http://scapi.weather.com.cn/weather/onareaids?areaids=101010200&date=201801161446&appid=f63d32&key=CF2oppx036QbbKQeBEgrLxW1ZCw%3D
+* 实况数据：从天气接口获取
+* 24小时预报：http://openapi.mlogcn.com:8000/api/aqi/fc/coor/116.298045/39.959907/h/2018011614/2018011714.json?appid=182e7b37a63445558b05fbcce2b3d6e7&timestamp=1516085120114&key=vRSi5vz6SdbMhTX6c797FXoPCDM%3D
+
+8，空气质量广告：https://shanxi.decision.tianqi.cn/Home/Work/getnewslist/type/42
+
+9，PDF列表数据接口、卫星云图网页地址 在登录接口返回
+
+10，雷达反射率：http://decision.tianqi.cn/data/page/radar.html

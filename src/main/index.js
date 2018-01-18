@@ -13,14 +13,19 @@ const winURL = process.env.NODE_ENV === 'development'
   ? `http://localhost:9080`
   : `file://${__dirname}/index.html`
 
+const ipc = require('electron').ipcMain;
 function createWindow () {
-  /**
-   * Initial window options
-   */
   mainWindow = new BrowserWindow({
-    height: 563,
+    backgroundColor: '#0b1833',
+    width: 1000,
+    height: 461,
     useContentSize: true,
-    width: 1000
+    resizable: false,
+    autoHideMenuBar: true,
+    frame: false,
+    webPreferences: {
+      plugins: true
+    }
   })
 
   mainWindow.loadURL(winURL)
@@ -29,7 +34,9 @@ function createWindow () {
     mainWindow = null
   })
 }
-
+ ipc.on('menus_show',() => {
+  mainWindow.setFullScreen(true)
+ })
 app.on('ready', createWindow)
 
 app.on('window-all-closed', () => {
